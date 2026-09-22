@@ -232,6 +232,32 @@ It is to understand **how passengers are distributed and moving through the rail
 
 ---
 
+---
+
+## ⚡ Confluent / Kafka Proof of Concept
+
+RailPulse currently has a small proof of concept demonstrating how its real-time passenger-flow events can be represented using **Apache Kafka and Confluent Cloud**.
+
+The current POC uses:
+
+* **Confluent Cloud**
+* **Apache Kafka**
+* **Datagen Source Connector**
+* **Kafka Topic**
+* **JSON event schema**
+* **Stream Lineage**
+
+### Current Event Flow
+
+```text
+RailPulse Datagen Connector
+            │
+            ▼
+     railpulse.events
+            │
+            ▼
+      Kafka Stream
+
 ## 🎯 Vision
 
 RailPulse aims to turn participating passenger journeys into a **live, adaptive representation of train occupancy and passenger flow**.
